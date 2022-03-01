@@ -10,6 +10,6 @@ class HomeBinding implements Bindings {
   void dependencies() {
     Get.put<IRestClient>(GetConnectClientService());
     Get.put<ITodoRepository>(TodoRepository(resttHttp: Get.find()));
-    Get.lazyPut(() => HomeController(repository: Get.find()));
+    Get.put(HomeController(repository: Get.find()));
   }
 }
