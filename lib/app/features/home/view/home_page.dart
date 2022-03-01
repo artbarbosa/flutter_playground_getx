@@ -16,9 +16,9 @@ class HomePage extends GetView<HomeController> {
         child: ListView.builder(
           itemCount: controller.list.length,
           itemBuilder: (context, index) => ListTile(
-            title: Text(
-              controller.list[index].title,
-            ),
+            title: Obx(() => Text(
+                  controller.list[index].title,
+                )),
           ),
         ),
       ),
