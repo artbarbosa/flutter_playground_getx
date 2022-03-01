@@ -3,8 +3,12 @@ import 'package:flutter_playground_getx/app/features/home/controller/home_contro
 
 import 'package:get/get.dart';
 
-class HomePage extends GetView<HomeController> {
-  const HomePage({Key? key}) : super(key: key);
+// GetView<HomeController>
+class HomePage extends StatelessWidget {
+  HomePage({Key? key}) : super(key: key);
+
+  final HomeController controller =
+      Get.put(HomeController(repository: Get.find()));
 
   @override
   Widget build(BuildContext context) {
